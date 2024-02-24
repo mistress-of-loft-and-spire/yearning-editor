@@ -1,0 +1,205 @@
+
+:root {
+	--padding: 8px;
+	--border: 6px;
+	--border-small: 4px;
+}
+
+@font-face {
+    font-family: 'Faune';
+    src: url('fonts/Faune-Display_Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Faune';
+    src: url('fonts/Faune-Display_Bold_Italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Faune';
+    src: url('fonts/Faune-Text_Regular.ttf') format('truetype');
+	font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Faune';
+    src: url('fonts/Faune-Text_Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Mutant';
+    src: url('fonts/MutantStandardEmoji-sbixOT.ttf') format('truetype');
+}
+
+body {
+	color: var(--base05);
+	background: var(--base0B);
+
+	font-family: 'Inter', sans-serif;
+	font-size: 14px;
+	
+	image-rendering: crisp-edges;
+
+	transition: 0.2s;
+}
+
+.window {
+	width: 96vw;
+	height: 96vh;
+	margin: 2vh auto;
+	
+	color: var(--base05);
+	
+	display: flex;
+	flex-direction: column; 
+	
+	background: var(--base00);
+	box-shadow: 0 0 60px #0005;
+	border-radius: var(--border);
+}
+
+.headerbar {
+	/* flex-basis: 32px; */
+	height: 46px;
+	padding: 0 0;
+	
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	font-weight: bold;
+	font-style: italic;
+}
+
+.sidebar {
+	width: 160px;
+
+	overflow: hidden;
+
+	display: flex;
+}
+
+.label {
+
+}
+
+#title {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.icon {
+	font-family: 'Mutant';
+}
+
+.button {
+	height: 32px;
+	padding: 0 16px;
+	margin: var(--padding);
+
+	color: var(--base05);
+
+	font-size: 1em;
+	line-height: 16px;
+
+	cursor: pointer;
+
+	background: var(--base01);
+	border: none;
+	border-radius: var(--border-small);
+
+	transition: background 0.2s;
+}
+.button:hover {
+	background: var(--base02);
+}
+.button:active {
+	background: var(--base03);
+}
+
+ul {
+	list-style-type: none;
+	padding: 0px;
+	padding-left: 24px
+}
+
+.filetree {
+    width: 100%;
+}
+
+#bot { background: var(--base01); }
+
+.mid {
+	flex-grow: 1;
+	
+	display: flex;
+	flex-direction: row;
+}
+
+.view {
+	transition: width 1s;
+}
+
+.view .vertical {
+	
+	width: 60%;
+	transition: width 0.5s;
+	
+	display: flex;
+	flex-direction: column;
+}
+
+.view .horizontal {	
+	display: flex;
+	flex-direction: row;
+}
+
+
+.code, .code-lines {
+	font-family: monospace;
+	font-size: 16px;
+	white-space: nowrap;
+}
+
+.code {
+	flex-grow: 1;
+	
+	padding: 1em 2em;
+}
+
+.code-lines {
+	text-align: right;
+	padding: 1em 0.5em;
+	
+	color: var(--base03);
+	
+	background: var(--base02);
+}
+
+.code-vis {	
+	padding: var(--padding);
+
+	background: var(--base01);
+	border-radius: 0 var(--border) 0 0;	
+}
+
+.console {
+	background: var(--base0F);
+	height: 80px;
+	overflow: hidden;
+
+	font-family: monospace;
+	font-size: 14px;
+	white-space: nowrap;
+}
+
+.gameview {
+	flex-grow: 1;
+	
+	background: url("placeholder.png") center;
+	background-size: cover;
+}

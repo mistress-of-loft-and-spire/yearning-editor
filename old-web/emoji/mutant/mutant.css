@@ -1,0 +1,16 @@
+.icon {
+    font-style: normal;
+    
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+
+    margin-right: 4px;
+    background-size: cover;
+    vertical-align: text-bottom;
+}
+
+.i-folder { background-image: url("folder.svg"); }
+.i-open-folder { background-image: url("open_folder.svg"); }
+.i-page { background-image: url("page.svg"); }
+.i-menu { background-image: url("nail_polish_hmn_v1.svg"); }

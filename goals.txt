@@ -1,0 +1,10 @@
+Things to explore/try:
+
+- Free & open source forever
+- Accessibility in a game engine
+- Crossplatform
+- Approachable coding and error handling
+- Rethinking language and concepts
+- editor and engine
+- flexibility
+- 

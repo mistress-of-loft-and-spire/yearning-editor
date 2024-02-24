@@ -1,0 +1,20 @@
+
+class Boshie extends Entity
+
+	x = 15
+	trace y = 304
+	
+	gfx = [RAW DATA]
+		
+	start:
+	
+		setPosition()
+			
+	loop:
+	
+		walkLeft(15, 0)
+		walkRight(-5, -5)
+			
+	talk:
+	
+		say("Howdy handsome")

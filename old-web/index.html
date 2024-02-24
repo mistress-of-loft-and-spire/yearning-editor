@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+
+	<title>babayaga test</title>
+	<meta name="description" content="Game editor">
+	<meta name="author" content="a bunch of spiders">
+
+	<link rel="stylesheet" href="hot.css">
+	<link rel="stylesheet" href="colors/rebecca.css">
+	<link rel="stylesheet" href="emoji/mutant/mutant.css">
+	<link rel="stylesheet" href="fonts/inter/inter.css">
+
+</head>
+
+<body>
+
+	<div class="window">
+
+		<div class="headerbar" id="top">
+			<button class="button"><div class="label"><i class="icon i-open-folder"></i>Open</div></button>
+			<div class="label" id="title">babayaga - organics.lvl</div>
+			<button class="button"><i class="icon i-menu"></i></button>
+			
+		</div>
+		
+		<div class="mid">
+
+			<div class="view sidebar">
+				<ul class="filetree">
+					<li><i class="icon i-folder"></i>colors</li>
+					<li><i class="icon i-open-folder"></i>Inter-Italic.woff</li>
+					<ul class="filetree">
+						<li><i class="icon i-folder"></i>colors</li>
+						<li><i class="icon i-open-folder"></i>Inter-Italic.woff</li>
+						<li><i class="icon i-page"></i>dracula.css</li>
+						<li>hot.css</li>
+						<li>index.html</li>
+					</ul>
+					<li><i class="icon i-page"></i>dracula.css</li>
+					<li>hot.css</li>
+					<li>index.html</li>
+				</ul>
+			</div>
+		
+			<div class="view vertical">
+				<div class="view horizontal">
+					<div class="code-lines">1</br>2</br>3</br>4</br>5</br>6</br>7</br>8</br>9</br>10</br>11</div>
+					
+					<div class="code">
+						include Test.hx</br></br>var = 15</br></br>start:</br>&#160;&#160;&#160;&#160;setGfx()
+					</div>
+					
+					<div class="code-vis">
+						<img src="sprite.png">
+					</div>
+				</div>
+
+				<div class="console"><p>list-style-type: none;</br>
+					padding: 0px;</br></br>
+						padding-left: 0px;</br>
+					padding-left: 24px;</p>
+				</div>
+				
+			</div>
+			
+			<div class="gameview"></div>
+		
+		</div>
+		
+		<div class="bar" id="bot">bottom bar <button onclick="document.getElementsByClassName('editor')[0].style.width='60%';">code on</button> <button onclick="document.getElementsByClassName('editor')[0].style.width='0%';">code off</button></div>
+	
+	</div>
+	
+</body>
+</html>

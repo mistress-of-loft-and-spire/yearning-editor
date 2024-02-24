@@ -1,0 +1,155 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+
+	<title>babayaga test</title>
+	<meta name="description" content="Game editor">
+	<meta name="author" content="a bunch of spiders">
+
+	<!-- style and color -->
+	<link rel="stylesheet" href="hot.css">
+	<link rel="stylesheet" href="colors/rebecca.css">
+
+	<!-- fonts -->
+	<link rel="stylesheet" href="emoji/mutant/mutant.css">
+	<link rel="stylesheet" href="fonts/inter/inter.css">
+	<link rel="stylesheet" href="fonts/faune/faune.css">
+
+	<!-- modules -->
+	<link rel="stylesheet" href="node_modules/octicons/build/build.css">
+	<script src="node_modules/monaco-editor/min/vs/loader.js"></script>
+
+	<script src="window.js"></script>
+
+	<script>
+		require.config({ paths: { vs: 'node_modules/monaco-editor/min/vs' } });
+
+		require(['vs/editor/editor.main'], function () {
+
+			monaco.editor.defineTheme('myTheme', {
+				base: 'vs-dark',
+				inherit: true,
+				rules: [{ background: '282936' }],
+				colors: {
+					'editor.foreground': '#e9e9f4',
+					'editor.background': '#2c1557',
+					'editorCursor.foreground': '#e9e9f4',
+					'editor.lineHighlightBackground': '#626483',
+					'editorLineNumber.foreground': '#663399',
+					'editorGutter.background': '#2c1557',
+					'editor.selectionBackground': '#4d4f68',
+					'editor.inactiveSelectionBackground': '#884d4f68'
+				}
+			});
+			monaco.editor.setTheme('myTheme');
+			
+			const editor = monaco.editor.create(document.getElementById('code-container'), {
+				value: ['function x() {', '\tconsole.log("Hello world!");', '}'].join('\n'),
+				language: 'javascript',
+				cursorBlinking: "smooth",
+				fontLigatures: true,
+				lineNumbersMinChars: 2,
+				minimap: {
+					enabled: false
+				}
+			});
+			
+		});
+	</script>
+
+</head>
+
+<body class="win">
+
+	<div class="window">
+		
+		<div class="sidebar">
+
+			<div class="header">
+				
+				<a class="label title" id="testy">My Game Project</a></div>
+				
+				
+			<div class="main">
+				<ul class="filetree">
+					<li><i class="icon i-folder"></i>My Game Project</li>
+					<li><i class="icon i-open-folder"></i>Inter-Italic.woff</li>
+					<ul>
+						<li><i class="icon i-folder"></i>colors</li>
+						<li><i class="icon i-open-folder"></i>Inter-Italic.woff</li>
+						<li><i class="icon i-page"></i>dracula.css</li>
+						<li>hot.css</li>
+						<li>index.html</li>
+					</ul>
+					<li><i class="icon i-page"></i>dracula.css</li>
+					<li>hot.css</li>
+					<li>index.html</li>
+				</ul>
+			</div>
+
+		</div>
+	
+		<!--<div class="welcome">
+			<div class="header">
+				<a class="label title center">yearning</a>
+			</div>
+			<div class="main"></div>
+			<div class="footer">
+				<button class="button"><div class="label"><script>octicons.x.toSVG()</script> Settings</div></button>
+				</div>
+		</div>-->
+
+		
+		<div class="editor">
+
+			<div class="header">
+				
+				<button class="tab"><div class="label"><i class="icon i-page"></i> main.yx</div></button>
+				<button class="tab"><div class="label"><i class="icon i-page"></i> main.yx</div></button>
+				
+				<button class="button" onclick="icon()"><div class="label"><i class="icon i-open-folder"></i> open</div></button>
+				<button class="button"><i class="icon i-menu"></i></button>
+				
+			</div>
+			
+			<div class="main">
+				<div class="code" id="code-container"></div>
+				
+				<!--
+						<div class="code-vis">
+							<img src="sprite.png">
+						</div>
+			-->
+			</div>
+
+			<div class="footer console">
+				<p>list-style-type: none;</br>
+					padding: 0px;</br></br>
+					padding-left: 0px;</br>
+					padding-left: 24px;</p>
+			</div>
+
+		</div>
+
+		<div class="viewport">
+
+			<div class="header">
+				
+				<button class="button"><div class="label"><i class="icon i-page"></i>view</div></button>
+				
+			</div>
+			
+			<div class="main">
+			
+			</div>
+
+		</div>
+	
+		
+	</div>
+	
+</body>
+</html>
